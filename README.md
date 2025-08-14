@@ -8,19 +8,6 @@ Project Camp Backend is a robust and scalable REST API designed to streamline te
 
 ---
 
-## 📘 Table of Contents
-
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [API Structure](#api-structure)
-- [User Roles & Permissions](#user-roles--permissions)
-- [Security Highlights](#security-highlights)
-- [File Management](#file-management)
-- [Setup Instructions](#setup-instructions)
-- [Project Requirements Document](#project-requirements-document)
-- [License](#license)
-
----
 
 ## 🚀 Features
 
