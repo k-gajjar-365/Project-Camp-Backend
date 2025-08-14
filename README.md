@@ -1,10 +1,10 @@
-# 🏕️ Project Camp Backend
+# 🏕️ ProjectForge
 
 **Version:** 1.0.0  
 **Type:** RESTful API for Collaborative Project Management  
 **Status:** In Development 🚧
 
-Project Camp Backend is a robust and scalable REST API designed to streamline team collaboration through structured project, task, and user management. Built with security and flexibility in mind, it supports role-based access control, hierarchical task organization, and secure file handling.
+ProjectForge is a robust and scalable REST API designed to streamline team collaboration through structured project, task, and user management. Built with security and flexibility in mind, it supports role-based access control, hierarchical task organization, and secure file handling.
 
 ---
 
