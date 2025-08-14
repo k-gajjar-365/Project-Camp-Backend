@@ -146,7 +146,7 @@ Project Camp Backend is a robust and scalable REST API designed to streamline te
 ## ⚙️ Setup Instructions
 
 1. Clone the repository  
-   `git clone https://github.com/k-gajjar-365/Project-Camp-Backend.git`
+   `git clone https://github.com/k-gajjar-365/ProjectForge.git`
 
 2. Install dependencies  
    `npm install`
