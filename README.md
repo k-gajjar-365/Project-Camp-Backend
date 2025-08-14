@@ -10,14 +10,17 @@ Project Camp Backend is a robust and scalable REST API designed to streamline te
 
 ## 🚧 Development Status
 
+## 🚧 Development Status
+
 | Module            | Status       | Notes                                      |
 |-------------------|--------------|--------------------------------------------|
 | 🔐 Authentication | ✅ Completed | All authentication routes implemented and tested |
+| 🩺 Health Check   | ✅ Completed | System status endpoint implemented and working |
 | 📦 Projects       | ⏳ Pending    | Project creation, listing, and updates in progress |
 | 👥 Members        | ⏳ Pending    | Member invitation and role management routes underway |
 | 📋 Tasks/Subtasks | ⏳ Pending    | Task CRUD and subtask logic to be added soon |
 | 📝 Notes          | ⏳ Pending    | Note creation and access routes planned for next phase |
-| 🩺 Health Check   | ⏳ Pending    | Basic system status endpoint to be added |
+
 
 
 ---
