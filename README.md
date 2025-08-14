@@ -105,7 +105,7 @@ All endpoints are prefixed with `/api/v1/`
 - `DELETE /notes/:projectId/n/:noteId`
 
 ### 🩺 Health Check
-- `GET /healthcheck/`
+- `GET /api/v1/healthcheck/`
 
 ---
 
