@@ -40,8 +40,7 @@ Project Camp Backend is a robust and scalable REST API designed to streamline te
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB with Mongoose ORM
 - **Authentication:** JWT, Email Tokens
-- **File Uploads:** Multer
-- **Security:** Helmet, CORS, Input Validation
+- **Security:** CORS, Input Validation
 
 ---
 
@@ -132,7 +131,7 @@ All endpoints are prefixed with `/api/v1/`
 ## ⚙️ Setup Instructions
 
 1. Clone the repository  
-   `git clone https://github.com/your-username/project-camp-backend.git`
+   `git clone https://github.com/k-gajjar-365/Project-Camp-Backend.git`
 
 2. Install dependencies  
    `npm install`
