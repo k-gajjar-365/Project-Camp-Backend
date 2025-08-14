@@ -8,7 +8,6 @@ Project Camp Backend is a robust and scalable REST API designed to streamline te
 
 ---
 
-## 🚧 Development Status
 
 ## 🚧 Development Status
 
@@ -62,50 +61,57 @@ Project Camp Backend is a robust and scalable REST API designed to streamline te
 
 ## 📂 API Structure
 
-All endpoints are prefixed with `/api/v1/`
+### Authentication Routes `/api/v1/auth/`
 
-### 🔑 Auth Routes
-- `POST /auth/register`
-- `POST /auth/login`
-- `POST /auth/logout`
-- `GET /auth/current-user`
-- `POST /auth/change-password`
-- `POST /auth/refresh-token`
-- `GET /auth/verify-email/:token`
-- `POST /auth/forgot-password`
-- `POST /auth/reset-password/:token`
-- `POST /auth/resend-email-verification`
 
-### 📦 Project Routes
-- `GET /projects/`
-- `POST /projects/`
-- `GET /projects/:projectId`
-- `PUT /projects/:projectId`
-- `DELETE /projects/:projectId`
-- `GET /projects/:projectId/members`
-- `POST /projects/:projectId/members`
-- `PUT /projects/:projectId/members/:userId`
-- `DELETE /projects/:projectId/members/:userId`
+- `POST /register` - User registration
 
-### 📋 Task Routes
-- `GET /tasks/:projectId`
-- `POST /tasks/:projectId`
-- `GET /tasks/:projectId/t/:taskId`
-- `PUT /tasks/:projectId/t/:taskId`
-- `DELETE /tasks/:projectId/t/:taskId`
-- `POST /tasks/:projectId/t/:taskId/subtasks`
-- `PUT /tasks/:projectId/st/:subTaskId`
-- `DELETE /tasks/:projectId/st/:subTaskId`
+- `POST /login` - User authentication
+- `POST /logout` - User logout (secured)
+- `GET /current-user` - Get current user info (secured)
+- `POST /change-password` - Change user password (secured)
+- `POST /refresh-token` - Refresh access token
+- `GET /verify-email/:verificationToken` - Email verification
+- `POST /forgot-password` - Request password reset
+- `POST /reset-password/:resetToken` - Reset forgotten password
+- `POST /resend-email-verification` - Resend verification email (secured)
 
-### 🗒️ Note Routes
-- `GET /notes/:projectId`
-- `POST /notes/:projectId`
-- `GET /notes/:projectId/n/:noteId`
-- `PUT /notes/:projectId/n/:noteId`
-- `DELETE /notes/:projectId/n/:noteId`
+### Project Routes `/api/v1/projects/`
 
-### 🩺 Health Check
-- `GET /api/v1/healthcheck/`
+- `GET /` - List user projects (secured)
+
+- `POST /` - Create project (secured)
+- `GET /:projectId` - Get project details (secured, role-based)
+- `PUT /:projectId` - Update project (secured, Admin only)
+- `DELETE /:projectId` - Delete project (secured, Admin only)
+- `GET /:projectId/members` - List project members (secured)
+- `POST /:projectId/members` - Add project member (secured, Admin only)
+- `PUT /:projectId/members/:userId` - Update member role (secured, Admin only)
+- `DELETE /:projectId/members/:userId` - Remove member (secured, Admin only)
+
+### Task Routes `/api/v1/tasks/`
+
+- `GET /:projectId` - List project tasks (secured, role-based)
+
+- `POST /:projectId` - Create task (secured, Admin/Project Admin)
+- `GET /:projectId/t/:taskId` - Get task details (secured, role-based)
+- `PUT /:projectId/t/:taskId` - Update task (secured, Admin/Project Admin)
+- `DELETE /:projectId/t/:taskId` - Delete task (secured, Admin/Project Admin)
+- `POST /:projectId/t/:taskId/subtasks` - Create subtask (secured, Admin/Project Admin)
+- `PUT /:projectId/st/:subTaskId` - Update subtask (secured, role-based)
+- `DELETE /:projectId/st/:subTaskId` - Delete subtask (secured, Admin/Project Admin)
+
+### Note Routes `/api/v1/notes/`
+- `GET /:projectId` - List project notes (secured, role-based)
+
+- `POST /:projectId` - Create note (secured, Admin only)
+- `GET /:projectId/n/:noteId` - Get note details (secured, role-based)
+- `PUT /:projectId/n/:noteId` - Update note (secured, Admin only)
+- `DELETE /:projectId/n/:noteId` - Delete note (secured, Admin only)
+
+### Health Check `/api/v1/healthcheck/`
+
+- `GET /` - System health status
 
 ---
 
@@ -133,14 +139,7 @@ All endpoints are prefixed with `/api/v1/`
 - CORS configuration for safe cross-origin access
 - File upload security via Multer
 
----
 
-## 📎 File Management
-
-- Multiple file attachments per task
-- Metadata tracking (URL, MIME type, size)
-- Files stored in `public/images/`
-- Secure upload handling
 
 ---
 
